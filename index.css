@@ -38,7 +38,7 @@ button {
     background-image: linear-gradient(to right, var(--Lime-Green), var(--Bright-Cyan));
     font-family: var(--font-public-sans);
     border: none;
-    padding: .75rem 1.5rem;
+    padding: .75rem 1.3rem;
     border-radius: 1.5rem;
     color: var(--White);
     font-size: 1rem;
@@ -46,7 +46,7 @@ button {
 }
 
 .container {
-    max-width: 80%;
+    max-width: 85%;
     margin: 0 auto;
 }
 
@@ -90,6 +90,9 @@ nav button {
     background-position: 50% 95%, right;
 }
 
+
+/* intro */
+
 .intro__section {
     background-color: var(--Very-Light-Gray);
     padding-top: 1rem;
@@ -112,11 +115,72 @@ nav button {
 }
 
 .intro__paragraph {
-    max-width: 25rem;
     text-align: center;
     color: var(--Grayish-Blue);
+    line-height: 1.5rem;
 }
 
+
+/* easy */
+
+.easy {
+    padding: 4rem;
+    background-color: var(--Light-Grayish-Blue);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.easy__heading {
+    font-weight: 400;
+    color: var(--Dark-Blue);
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.easy__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.easy__paragraph {
+    text-align: center;
+    color: var(--Grayish-Blue);
+    line-height: 1.5rem;
+    min-width: 18rem;
+}
+
+.reason, .reasons, .reason__details {
+    display: flex;
+    flex-direction: column;
+}
+
+.reason__details {
+    gap: .8rem;
+}
+
+.reason, .reasons {
+    gap: 1.8rem;
+}
+
+.reason {
+    align-items: center;
+}
+
+.reason__title {
+    text-align: center;
+    color: var(--Dark-Blue);
+    font-size: 1.3rem;
+}
+
+.reason__text {
+    text-align: center;
+    color: var(--Grayish-Blue);
+    line-height: 1.5rem;
+    min-width: 18rem;
+}
 
 /*----------------------------- attribution ------------------ */
 .attribution {
@@ -133,7 +197,7 @@ nav button {
 }
 
 
-@media (min-width:786px) {
+@media (min-width:780px) {
     nav ul {
         display: flex;
     }
@@ -141,6 +205,7 @@ nav button {
     nav button {
         display: block;
     }
+
 
     .mobile__bg {
         display: none;
@@ -151,6 +216,7 @@ nav button {
     }
 
     .intro__paragraph {
+        max-width: 25rem;
         text-align: left;
     }
 
@@ -161,5 +227,37 @@ nav button {
 
     .intro__heading {
         max-width: 21rem;
+    }
+
+    .easy__container {
+        align-items: start;
+    }
+
+    .easy__heading {
+        max-width: none;
+    }
+
+    .easy__paragraph {
+        max-width: 38rem;
+        text-align: left;
+        line-height: 1.5rem;
+    }
+
+    .reason {
+        align-items: start;
+    }
+
+    .reason__text, .reason__title {
+        text-align: left;
+    }
+
+    .reason__text {
+        max-width: 16.56rem;
+    }
+
+    .reasons {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
