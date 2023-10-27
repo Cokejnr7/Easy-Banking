@@ -260,6 +260,7 @@ footer {
 .logo__construct {
     position: relative;
     overflow: hidden;
+    min-width: 9rem;
 }
 
 .logo__construct>span {
@@ -274,6 +275,38 @@ footer {
     font-family: var(--font-outfit);
 }
 
+.logo__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.social__links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social__link:not(:nth-child(2)) {
+    font-size: 1.778rem;
+    color: var(--Very-Light-Gray);
+}
+
+.social__link {
+    text-decoration: none;
+}
+
+.tube {
+    background-color: var(--Very-Light-Gray);
+    width: 1.778rem;
+    height: 1.778rem;
+    color: var(--Dark-Blue);
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+}
 
 /*----------------------------- attribution ------------------ */
 .attribution {
