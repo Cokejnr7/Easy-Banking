@@ -257,6 +257,13 @@ footer {
     padding: 3rem 0rem;
 }
 
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+}
+
 .logo__construct {
     position: relative;
     overflow: hidden;
@@ -307,6 +314,36 @@ footer {
     border-radius: 50%;
     align-items: center;
 }
+
+.footer__links, .footer__links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.footer__links li {
+    list-style-type: none;
+
+}
+
+.footer__links a {
+    text-decoration: none;
+    color: var(--Light-Grayish-Blue);
+}
+
+.button__rights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.rights {
+    color: var(--Light-Grayish-Blue);
+}
+
 
 /*----------------------------- attribution ------------------ */
 .attribution {
