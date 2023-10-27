@@ -24,11 +24,12 @@
     --font-public-sans: 'Public Sans', sans-serif;
     --font-outfit: 'Be Vietnam Pro', sans-serif;
 
-    --line-height: 1.3rem;
+    --line-height: 1.24rem;
 }
 
 html {
     height: 100%;
+    font-size: 18px;
 }
 
 body {
@@ -113,9 +114,9 @@ nav button {
 .intro__heading {
     color: var(--Dark-Blue);
     font-weight: 500;
-    max-width: 24rem;
+    max-width: 21rem;
     text-align: center;
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-size: clamp(2rem, 6vw, 3.25rem);
 }
 
 .intro__paragraph {
@@ -269,7 +270,7 @@ footer {
     /* letter-spacing: .038rem; */
     color: var(--White);
     font-weight: 800;
-    font-size: 1.37rem;
+    font-size: 1.35rem;
     font-family: var(--font-outfit);
 }
 
@@ -320,7 +321,7 @@ footer {
     }
 
     .intro__heading {
-        max-width: 30rem;
+        max-width: 25rem;
         text-align: left;
     }
 
