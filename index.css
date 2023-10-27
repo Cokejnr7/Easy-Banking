@@ -21,6 +21,8 @@
 
     /*------------- font ----------------- */
     --font-public-sans: 'Public Sans', sans-serif;
+
+    --line-height: 1.3rem;
 }
 
 html {
@@ -38,7 +40,7 @@ button {
     background-image: linear-gradient(to right, var(--Lime-Green), var(--Bright-Cyan));
     font-family: var(--font-public-sans);
     border: none;
-    padding: .75rem 1.3rem;
+    padding: .6rem 1.3rem;
     border-radius: 1.5rem;
     color: var(--White);
     font-size: 1rem;
@@ -91,7 +93,7 @@ nav button {
 }
 
 
-/* intro */
+/*------------------------------------ intro  --------------------------------*/
 
 .intro__section {
     background-color: var(--Very-Light-Gray);
@@ -117,18 +119,16 @@ nav button {
 .intro__paragraph {
     text-align: center;
     color: var(--Grayish-Blue);
-    line-height: 1.5rem;
+    line-height: var(--line-height);
 }
 
 
-/* easy */
+/*------------------------------------------- easy -------------------------------------- */
 
 .easy {
-    padding: 4rem;
+    padding: 6rem 0rem;
     background-color: var(--Light-Grayish-Blue);
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+
 }
 
 .easy__heading {
@@ -136,33 +136,42 @@ nav button {
     color: var(--Dark-Blue);
     font-size: 1.8rem;
     text-align: center;
+    max-width: 15rem;
 }
 
-.easy__container {
+.reason, .reasons, .reason__details, .easy__container__outer, .easy__container__inner {
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+.easy__container__outer {
+    gap: 5rem;
+}
+
+.easy__container__inner {
     gap: 1rem;
+    align-items: center;
 }
 
 .easy__paragraph {
     text-align: center;
     color: var(--Grayish-Blue);
-    line-height: 1.5rem;
+    line-height: var(--line-height);
     min-width: 18rem;
 }
 
-.reason, .reasons, .reason__details {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .reason__details {
-    gap: .8rem;
+    gap: 1.2rem;
 }
 
-.reason, .reasons {
+.reasons {
     gap: 1.8rem;
+}
+
+.reason {
+    gap: 2rem;
 }
 
 .reason {
@@ -172,15 +181,47 @@ nav button {
 .reason__title {
     text-align: center;
     color: var(--Dark-Blue);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .reason__text {
     text-align: center;
     color: var(--Grayish-Blue);
-    line-height: 1.5rem;
-    min-width: 18rem;
+    line-height: var(--line-height);
 }
+
+/* articles */
+
+.latest__articles {
+    background-color: var(--Very-Light-Gray);
+}
+
+.articles__container {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0rem;
+    gap: 2rem;
+}
+
+.articles__heading {
+    color: var(--Dark-Blue);
+    font-weight: 500;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.article__author, .article__text {
+    color: var(--Grayish-Blue);
+}
+
+.article__title {
+    color: var(--Dark-Blue);
+}
+
 
 /*----------------------------- attribution ------------------ */
 .attribution {
@@ -197,7 +238,9 @@ nav button {
 }
 
 
-@media (min-width:780px) {
+
+/*---------------------------------- media queries ----------------------------- */
+@media (min-width:790px) {
     nav ul {
         display: flex;
     }
@@ -229,18 +272,23 @@ nav button {
         max-width: 21rem;
     }
 
-    .easy__container {
+    .easy__container__outer {
+        align-items: start;
+    }
+
+    .easy__container__inner {
         align-items: start;
     }
 
     .easy__heading {
         max-width: none;
+        text-align: left;
     }
 
     .easy__paragraph {
         max-width: 38rem;
         text-align: left;
-        line-height: 1.5rem;
+        line-height: var(--line-height);
     }
 
     .reason {
@@ -259,5 +307,9 @@ nav button {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+    }
+
+    .articles__heading {
+        text-align: left;
     }
 }
