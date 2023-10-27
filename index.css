@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&display=swap');
 
 *, *::before, *::after {
     margin: 0;
@@ -21,6 +22,7 @@
 
     /*------------- font ----------------- */
     --font-public-sans: 'Public Sans', sans-serif;
+    --font-outfit: 'Be Vietnam Pro', sans-serif;
 
     --line-height: 1.3rem;
 }
@@ -111,8 +113,9 @@ nav button {
 .intro__heading {
     color: var(--Dark-Blue);
     font-weight: 500;
-    max-width: 15rem;
-    font-size: clamp(2rem, 4vw, 2.5rem);
+    max-width: 24rem;
+    text-align: center;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
 }
 
 .intro__paragraph {
@@ -221,9 +224,6 @@ nav button {
     text-align: center;
 }
 
-.article__title {
-    font-size: 1.15rem;
-}
 
 .article__details {
     padding: 1.5rem;
@@ -245,6 +245,32 @@ nav button {
 .article__title {
     color: var(--Dark-Blue);
     line-height: var(--line-height);
+    font-size: 1.22rem;
+}
+
+
+/* footer */
+
+footer {
+    background-color: var(--Dark-Blue);
+    padding: 3rem 0rem;
+}
+
+.logo__construct {
+    position: relative;
+    overflow: hidden;
+}
+
+.logo__construct>span {
+    position: absolute;
+    right: 0;
+    top: -5.8px;
+    left: 30.4px;
+    /* letter-spacing: .038rem; */
+    color: var(--White);
+    font-weight: 800;
+    font-size: 1.37rem;
+    font-family: var(--font-outfit);
 }
 
 
@@ -294,7 +320,8 @@ nav button {
     }
 
     .intro__heading {
-        max-width: 21rem;
+        max-width: 30rem;
+        text-align: left;
     }
 
     .easy__container__outer {
