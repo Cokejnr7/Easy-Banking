@@ -196,11 +196,24 @@ nav button {
     background-color: var(--Very-Light-Gray);
 }
 
-.articles__container {
+.articles__container, .article__details {
     display: flex;
     flex-direction: column;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.articles__container {
     padding: 5rem 0rem;
     gap: 2rem;
+}
+
+.articles {
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .articles__heading {
@@ -209,9 +222,17 @@ nav button {
     text-align: center;
 }
 
+.article__details {
+    padding: 1.5rem;
+    gap: .5rem;
+}
+
 .card {
     display: flex;
     flex-direction: column;
+    background-color: var(--White);
+    border-radius: .3rem;
+    overflow: hidden;
 }
 
 .article__author, .article__text {
@@ -220,6 +241,7 @@ nav button {
 
 .article__title {
     color: var(--Dark-Blue);
+    line-height: var(--line-height);
 }
 
 
@@ -312,4 +334,13 @@ nav button {
     .articles__heading {
         text-align: left;
     }
+
+    .card img {
+        min-height: 220px;
+    }
+
+    .card {
+        max-width: 300px;
+    }
+
 }
