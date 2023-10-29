@@ -14,6 +14,7 @@
     --Lime-Green: rgb(49, 211, 92);
     --Lime-Green-alpha: rgba(49, 211, 92, .5);
     --Bright-Cyan: hsl(192, 70%, 51%);
+    --Bright-Cyan-alpha: rgba(43, 183, 218, .5);
 
     /*-------------- ### Neutral ### --------------*/
     --Grayish-Blue: hsl(233, 8%, 62%);
@@ -73,6 +74,19 @@ nav ul {
 
 nav li {
     list-style-type: none;
+    position: relative;
+    transition: visibility 0.5s;
+}
+
+nav li::after {
+    content: "";
+    visibility: hidden;
+    height: 3.5px;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--Lime-Green), var(--Bright-Cyan));
+    position: absolute;
+    left: 0;
+    bottom: -170%;
 }
 
 nav a {
@@ -581,10 +595,27 @@ footer a {
 
 @media (hover: hover) and (pointer: fine) {
     .footer__links a:hover, .social__link:not(:nth-child(2)):hover {
-        color: var(--Lime-Green-alpha) !important;
+        color: var(--Lime-Green) !important;
     }
 
     .tube:hover {
-        background-color: var(--Lime-Green-alpha) !important;
+        background-color: var(--Lime-Green) !important;
+    }
+
+    nav a:hover {
+        color: var(--Dark-Blue);
+    }
+
+    .article__title:hover {
+        cursor: pointer;
+        color: var(--Lime-Green);
+    }
+
+    nav li:hover::after {
+        visibility: visible;
+    }
+
+    button:hover {
+        background-image: linear-gradient(to right, var(--Lime-Green-alpha), var(--Bright-Cyan-alpha));
     }
 }
