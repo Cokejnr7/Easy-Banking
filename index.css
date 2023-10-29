@@ -559,9 +559,10 @@ footer a {
     }
 
     .reasons {
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        gap: 1rem;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 
     .articles__heading {
