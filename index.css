@@ -82,6 +82,55 @@ nav button {
     display: none;
 }
 
+/* hamburger */
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    width: 3rem;
+    height: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 2.5rem;
+    height: 1.5px;
+    background-color: black;
+    position: absolute;
+    transition: transform 0.5s;
+}
+
+.top__bar {
+    top: 25%;
+}
+
+.bottom__bar {
+    bottom: 25%;
+}
+
+.open .middle__bar {
+    transform: translateX(-120%);
+}
+
+.open .top__bar {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.open .bottom__bar {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+
+
+
+
 /*------------------------- main  -------------------*/
 
 .mobile__bg {
@@ -357,6 +406,7 @@ footer a {
     bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
+    color: var(--Very-Light-Gray);
 }
 
 .attribution a {
@@ -398,7 +448,13 @@ footer a {
     .intro__section {
         width: 100%;
         padding: 20vh 0;
+        background-image: url(images/image-mockups.png), url(images/bg-intro-desktop.svg);
+        background-repeat: no-repeat;
+        background-overflow: hidden;
+        background-position: 52vw 10%, 44vw 90%;
+        background-size: 45%, 900px;
     }
+
 
     .intro__heading {
         max-width: 25rem;
@@ -469,6 +525,10 @@ footer a {
 
     .footer__links__desktop {
         display: flex;
+    }
+
+    .hamburger {
+        display: none;
     }
 }
 
