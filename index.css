@@ -318,7 +318,7 @@ body {
 
 .articles {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
 .articles__container {
@@ -340,7 +340,7 @@ body {
 
 .article__details {
     padding: 1.5rem;
-    gap: .5rem;
+    gap: .8rem;
 }
 
 .card {
@@ -358,7 +358,7 @@ body {
 .article__title {
     color: var(--Dark-Blue);
     line-height: var(--line-height);
-    font-size: 1.22rem;
+    font-size: 1.12rem;
 }
 
 
