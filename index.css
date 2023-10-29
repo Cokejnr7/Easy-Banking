@@ -11,7 +11,8 @@
 :root {
     /*-------------- ### Primary ### --------------*/
     --Dark-Blue: hsl(233, 26%, 24%);
-    --Lime-Green: hsl(136, 65%, 51%);
+    --Lime-Green: rgb(49, 211, 92);
+    --Lime-Green-alpha: rgba(49, 211, 92, .5);
     --Bright-Cyan: hsl(192, 70%, 51%);
 
     /*-------------- ### Neutral ### --------------*/
@@ -46,6 +47,7 @@ button {
     color: var(--White);
     font-size: 1rem;
     max-width: 11rem;
+    cursor: pointer;
 }
 
 .container {
@@ -128,13 +130,25 @@ nav button {
 }
 
 .mobile__navigation {
-    display: flex;
+    display: none;
     justify-content: center;
     padding: 2rem 0;
-    border-radius: .2rem;
+    border-radius: .3rem;
     background-color: var(--White);
-    /* box-shadow: 10px 10px 10px var(--Dark-Blue); */
+    box-shadow: 0 0 200px hsla(233, 26%, 24%);
+    margin: 20px auto;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
 }
+
+.open__nav {
+    display: flex;
+}
+
+
 
 .mobile__navigation ul {
     display: flex;
@@ -562,5 +576,15 @@ footer a {
 @media (max-width: 850px) {
     .container {
         max-width: 90%;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .footer__links a:hover, .social__link:not(:nth-child(2)):hover {
+        color: var(--Lime-Green-alpha) !important;
+    }
+
+    .tube:hover {
+        background-color: var(--Lime-Green-alpha) !important;
     }
 }
